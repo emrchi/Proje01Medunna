@@ -369,10 +369,10 @@ public class AdminPages {
 
     //Sinem 370
     //Hamza 371-600
-
-
-
-
+    @FindBy(xpath = "//li[@id='entity-menu']")
+    public WebElement itemsAndTitles;
+    @FindBy(xpath = "(//a[@role='menuitem'])[5]")
+    public WebElement testItem;
 
 
 
