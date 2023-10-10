@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
         "rerun:TestOutput/failed_scenario.txt"},
         features = "src/test/resources/features",
         glue = {"team01/stepDefinition","team01/hooks"},
-        tags = "@data",
+        tags = "",
         dryRun = false,
         monochrome = true
 
