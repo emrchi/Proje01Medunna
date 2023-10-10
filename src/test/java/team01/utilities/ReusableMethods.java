@@ -274,6 +274,18 @@ public class ReusableMethods {
 
     }
 
+    public static List<WebElement> getTableData(Integer row,Integer column){
+        List<WebElement> infoList;
+        if (row==null){
+            infoList = Driver.getDriver().findElements(By.xpath("//tbody//td["+column+"]"));
+        } else if (column == null) {
+            infoList = Driver.getDriver().findElements(By.xpath("//tbody//tr["+row+"]"));
+        }else {
+            infoList = Driver.getDriver().findElements(By.xpath("//tbody//tr["+row+"]//td["+column+"]"));
+        }
+        return infoList;
+    }
+
 
 
 }
