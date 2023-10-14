@@ -412,7 +412,7 @@ public class AdminPages {
     @FindBy(xpath = "//a[@class='btn btn-info']")
     public WebElement testItemBack;
     @FindBy(xpath = "(//button[@type='button'])[4]")
-    public WebElement deleteButton;
+    public WebElement AlertDeleteButton;
     @FindBy(xpath = "//div[@class='invalid-feedback']")
     public WebElement invalidPrice;
     @FindBy(xpath = "(//div[@class='invalid-feedback'])[1]")
