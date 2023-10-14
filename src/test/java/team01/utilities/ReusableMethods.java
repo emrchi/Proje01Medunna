@@ -1,5 +1,6 @@
 package team01.utilities;
 
+import com.github.javafaker.Faker;
 import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
 import org.openqa.selenium.*;
@@ -18,6 +19,8 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Random;
+
 import static org.junit.Assert.assertTrue;
 
 public class ReusableMethods {
@@ -284,6 +287,34 @@ public class ReusableMethods {
             infoList = Driver.getDriver().findElements(By.xpath("//tbody//tr["+row+"]//td["+column+"]"));
         }
         return infoList;
+    }
+
+    public static String fakeBirthDate(String format) {
+        Faker faker = new Faker();
+        Date fakeBirthdate = faker.date().birthday();
+        SimpleDateFormat dateFormat = new SimpleDateFormat(format);
+        return dateFormat.format(fakeBirthdate);
+    }
+
+    public static String randomPhone() {
+        Random random = new Random();
+        String sayi1 = Integer.toString(random.nextInt(899) + 100);
+        String sayi2 = Integer.toString(random.nextInt(899) + 100);
+        String sayi3 = Integer.toString(random.nextInt(8999) + 1000);
+        String phone = sayi1 + "-" + sayi2 + "-" + sayi3;
+        return phone;
+
+    }
+    public static String randomRoomNumber() {
+        Random random = new Random();
+        String sayi1 = Integer.toString(random.nextInt(899999999) + 100000);
+        return sayi1;
+
+    }
+
+    public static void clearJS(WebElement element) {
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        js.executeScript("arguments[0].value = ''", element);
     }
 
 
