@@ -315,4 +315,6 @@ public class US15_UI_SD {
     public void phoneAlaninaGir(String phone) {
         page.phonePatient.sendKeys(phone);
     }
+
+
 }

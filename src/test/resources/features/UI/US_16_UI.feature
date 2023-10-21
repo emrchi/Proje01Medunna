@@ -43,7 +43,9 @@ Feature: US01
     And Room eklenemedigini dogrula
     And Created Date alanina "08.10.22222" şeklinde tarih gir
     And Save butonuna tikla
-    And Room eklenemedigini dogrula
+    And Room eklendigini dogrula
+    And Room listin altinda son sayfaya git butonuna tikla
+    And Olusturulan Roomun Created Date bilgisinin degismedigini dogrula
 
   Scenario: TC04
     And Room listin altinda son sayfaya git butonuna tikla
