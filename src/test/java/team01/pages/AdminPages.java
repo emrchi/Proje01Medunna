@@ -347,8 +347,8 @@ public class AdminPages {
     public WebElement save;
     @FindBy(xpath = "//div[@class='Toastify__toast Toastify__toast--success toastify-toast']")
     public WebElement dogrulamaYazisi;
-    @FindBy(xpath = "(//button[@type='button'])[4]")
-    public WebElement deleteButton;
+   // @FindBy(xpath = "(//button[@type='button'])[4]")
+   // public WebElement deleteButton;
     @FindBy(xpath = "//div[@class='Toastify__toast Toastify__toast--success toastify-toast']")
     public WebElement silmeDogrulama;
     @FindBy(linkText = "State/City")
