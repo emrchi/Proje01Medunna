@@ -6,10 +6,10 @@ import static team01.utilities.Authentication.generateToken;
 
 public class Medunna {
     public static RequestSpecification spec;
-    public static void setup(String username, String password, Boolean rememberMe) {
+    public static void setup(String password, Boolean rememberMe,String username ) {
         spec = new RequestSpecBuilder()
                 .setBaseUri("https://medunna.com/")
-                .addHeader("Authorization", "Bearer " + generateToken(password,username, rememberMe))
+                .addHeader("Authorization", "Bearer " + generateToken(password,rememberMe,username))
                 .setContentType(ContentType.JSON)
                 .build();
     }

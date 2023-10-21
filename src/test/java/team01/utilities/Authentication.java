@@ -15,19 +15,21 @@ public class Authentication {
 
  */
 
-    public static String generateToken(String password, String  username, Boolean rememberMe) {
+    public static String generateToken(String password, Boolean rememberMe,String  username) {
 
-        String body = "{\n" +
+       String body = "{\n" +
                 "  \"password\": \""+password+"\",\n" +
                 "  \"rememberMe\": "+rememberMe+",\n" +//true veya false yazilacak, örneginde true yaziyordu, tercih sizin
                 "  \"username\": \""+username+"\"\n" +
                 "}";
 
+
+
         Response response = given().
                 body(body).
                 contentType(ContentType.JSON).
                 when().
-                post("https://medunna.com/");
+                post("https://medunna.com/api/authenticate");
 
         response.prettyPrint();
 
