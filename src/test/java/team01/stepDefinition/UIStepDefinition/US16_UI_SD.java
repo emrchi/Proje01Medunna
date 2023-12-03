@@ -182,4 +182,10 @@ public class US16_UI_SD {
     public void sayfayiKapat() {
         Driver.closeDriver();
     }
+
+    @And("Olusturulan Roomun Created Date bilgisinin degismedigini dogrula")
+    public void olusturulanRoomunCreatedDateBilgisininDegismediginiDogrula() {
+
+
+    }
 }
